@@ -1,0 +1,19 @@
+1. Whenever the socket server is been called, this function is executed: io.on("connection")
+
+2. Whenever any connection above is lost, socket.on('disconnect') will be triggered
+
+3. Send event to client:
+=======================  Socket Server ====================
+===== Send event to client =====
+a. Use io : to send event to client
+b. Use io.emit : to send to every client
+c. Use io.to(socketId).emit: to sent to one client
+
+======== To take event from client ======
+Use socket.on
+
+
+
+===================== Client Server =================
+a. Use socket.emit: to send event to server
+b. Use socket.on: to take event from server
